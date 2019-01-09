@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "642665530799",
+    "firebase_url": "https://sapiadvertiser-b915a.firebaseio.com",
+    "project_id": "sapiadvertiser-b915a",
+    "storage_bucket": "sapiadvertiser-b915a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642665530799:android:a8787fa9f0a504f1",
+        "android_client_info": {
+          "package_name": "com.example.windows10.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642665530799-4469uk0haapt78vv96kpr6ah70g84lgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.windows10.myapplication",
+            "certificate_hash": "537f1765f279a578bd8eeae306035484944e3af9"
+          }
+        },
+        {
+          "client_id": "642665530799-9ido7u5632cphqeubbrv1205ro3o7ui6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClg_PN86t8FQRPISvGcvc4Y8PCgF6vd3k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642665530799-9ido7u5632cphqeubbrv1205ro3o7ui6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
