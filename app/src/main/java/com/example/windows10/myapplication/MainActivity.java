@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button1 = findViewById(R.id.loginbutton);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddFragment.class);
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
         });
