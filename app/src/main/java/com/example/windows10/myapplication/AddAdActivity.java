@@ -58,7 +58,7 @@ public class AddAdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_ad);
 
         mButtonChooseImage = findViewById(R.id.button_choose_image);
         mButtonUpload = findViewById(R.id.button_upload);
@@ -68,7 +68,7 @@ public class AddAdActivity extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progress_bar);
         mEditTextDescription = findViewById(R.id.description_ed);
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("Data");
+        mStorageRef = FirebaseStorage.getInstance().getReference("Data/");
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Data");
 
 
@@ -87,6 +87,7 @@ public class AddAdActivity extends AppCompatActivity {
                     Toast.makeText(AddAdActivity.this, "Upload in progress", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadFile();
+
                 }
             }
         });
@@ -127,6 +128,7 @@ public class AddAdActivity extends AppCompatActivity {
 
     private void uploadFile() {
         if (mImageUri != null) {
+            //final StorageReference fileReferences=mStorageRef.child(System.currentTimeMillis()+ "." +getFileExtension(mImageUri));
             mStorageRef.putFile(mImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override
                 public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
@@ -147,7 +149,9 @@ public class AddAdActivity extends AppCompatActivity {
                                 downloadUri.toString(), mEditTextDescription.getText().toString().trim());
 
                         mDatabaseRef.push().setValue(upload);
-                    } else { //Toast.makeText(AddAdActivity.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddAdActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
+
+                    } else { Toast.makeText(AddAdActivity.this, "upload failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

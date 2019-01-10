@@ -1,43 +1,43 @@
 package com.example.windows10.myapplication;
 
 public class Upload {
-    private String mName;
-    private String mImageUrl;
-    private String mDescription;
+    private String title;
+    private String image;
+    private String description;
 
     public Upload() {
         //empty constructor needed
     }
 
-    public Upload(String name, String imageUrl,String description) {
+    public Upload(String name, String imageUrl,String description1) {
         if (name.trim().equals("")) {
             name = "No Name";
         }
 
-        mName = name;
-        mImageUrl = imageUrl;
-        mDescription=description;
+        title = name;
+        image = imageUrl;
+        description=description1;
     }
 
-    public String getName() {
-        return mName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        mName = name;
+    public void setTitle(String name) {
+        title = name;
     }
 
-    public String getImageUrl() {
-        return mImageUrl;
+    public String getImage() {
+        return image;
     }
-    public String getIDescription() {
-        return mDescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setImageUrl(String imageUrl) {
-        mImageUrl = imageUrl;
+    public void setImage(String imageUrl) {
+        image = imageUrl;
     }
-    public void setDescription(String description) {
-        mDescription = description;
+    public void setDescription(String description1) {
+        description = description1;
     }
 }

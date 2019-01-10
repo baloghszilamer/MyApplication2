@@ -98,7 +98,7 @@ public class  LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Code is empty",Toast.LENGTH_LONG).show();
                 }else {
                     verifySignInCode();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, ListActivity.class);
                     startActivity(intent);
                 }
             }
